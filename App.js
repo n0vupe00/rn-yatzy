@@ -1,9 +1,9 @@
 
-import Header from './Header';
-import Footer from './Footer';
-import styles from './Tyyli';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import styles from './style/Tyyli';
 import {  Text, View } from 'react-native';
-import Gameboard from './Gameboard';
+import Gameboard from './components/Gameboard';
 import { useFonts } from 'expo-font';
 
 export default function App() {

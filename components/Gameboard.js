@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { Text, View, Pressable } from 'react-native';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Col, Grid } from 'react-native-easy-grid';
-import styles from './Tyyli';
+import styles from '../style/Tyyli';
 
 let board = [];
 const NBR_OF_DICES = 5;
