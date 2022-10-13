@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import Header from './Header';
+import Footer from './Footer';
+import styles from './Tyyli';
+import {  Text, View } from 'react-native';
+import Gameboard from './Gameboard';
+import { useFonts } from 'expo-font';
 
 export default function App() {
+
+  const [loaded] = useFonts({
+    GemunuLibre: require('./assets/fonts/GemunuLibre.ttf'),
+    LatoRegular: require('./assets/fonts/Lato-Regular.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  } 
+
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Header />
+      <Gameboard/>
+      <Footer />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
